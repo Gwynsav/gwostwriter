@@ -3,18 +3,7 @@
 -- Based on shadmansaleh's lualine adaptation of glepnir's eviline theme.
 -- https://github.com/nvim-lualine/lualine.nvim/blob/master/examples/evil_lualine.lua
 
-local colors = {
-   bg       = '#191724',
-   bg_light = '#26233a',
-   fg_dark  = '#908caa',
-   fg       = '#e0def4',
-   red      = '#eb6f92',
-   green    = '#31748f',
-   yellow   = '#f6c177',
-   blue     = '#9ccfd8',
-   magenta  = '#c4a7e7',
-   cyan     = '#ebbcba'
-}
+local colors = require('colors')
 
 local conditions = {
    -- Returns true if the current buffer is not empty.
@@ -130,10 +119,10 @@ ins_left({
    sources = { 'nvim_diagnostic' },
    symbols = { error = '!! ', warn = '?? ', info = 'ii ', hint = 'hh '},
    diagnostics_color = {
-      error = { fg = colors.red    },
-      warn  = { fg = colors.yellow },
-      info  = { fg = colors.green  },
-      hint  = { fg = colors.blue   }
+      error = { fg = colors.red     },
+      warn  = { fg = colors.yellow  },
+      info  = { fg = colors.blue    },
+      hint  = { fg = colors.magenta }
    }
 })
 
@@ -147,7 +136,7 @@ ins_left({ function() return '%=' end })
 ins_right({
    'branch',
    icon  = 'branch',
-   color = { fg = colors.magenta, gui = 'italic' }
+   color = { fg = colors.fg_dark, gui = 'italic' }
 })
 
 -- Current git branch diff information.
@@ -155,9 +144,9 @@ ins_right({
    'diff',
    symbols = { added = '+', modified = '~', removed = '-' },
    diff_color = {
-      added    = { fg = colors.green },
-      modified = { fg = colors.yellow },
-      removed  = { fg = colors.red }
+      added    = { fg = colors.blue },
+      modified = { fg = colors.cyan },
+      removed  = { fg = colors.red  }
    },
    cond = conditions.hide_in_width
 })

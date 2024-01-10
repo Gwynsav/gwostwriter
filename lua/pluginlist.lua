@@ -11,9 +11,7 @@ return {
 	-- Comfy commenting.
 	{
 		'numToStr/Comment.nvim',
-		config = function()
-			require('Comment').setup()
-		end
+		config = function() require('Comment').setup() end
 	},
 	-- LSP
 	{
@@ -59,51 +57,14 @@ return {
    -- Colorize hex/rgb color codes.
    {
       'norcalli/nvim-colorizer.lua',
-      config = function()
-         require('colorizer').setup()
-      end
+      config = function() require('colorizer').setup() end
    },
 
 	-- Colorschemes
    ---------------
    {
       'nyoom-engineering/oxocarbon.nvim',
-      -- lazy = false,
-      -- priority = 1000,
-      -- config = function()
-      --    vim.o.background = 'dark'
-      --    vim.cmd.colorscheme('oxocarbon')
-      -- end
-   },
-   {
       'maxmx03/solarized.nvim',
-      -- lazy = false,
-      -- priority = 1000,
-      -- config = function()
-      --    vim.o.background = 'dark'
-      --    vim.cmd.colorscheme('solarized')
-      -- end
-   },
-   {
-      'rose-pine/neovim',
-      name = 'rose-pine',
-      lazy = false,
-      priority = 1000,
-      config = function()
-         vim.o.background = 'dark'
-         require('rose-pine').setup({
-            variant = 'main',
-            -- bold_vert_split = true,
-            disable_background = true,
-            groups = {
-               border = 'base',
-               panel  = 'base'
-            },
-            highlight_groups = {
-               CursorLine = { bg = 'surface', blend = 8 }
-            }
-         })
-         vim.cmd.colorscheme('rose-pine')
-      end
+      { 'rose-pine/neovim', name = 'rose-pine' }
    }
 }

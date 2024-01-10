@@ -27,13 +27,13 @@ require('nvim-tree').setup({
             symlink  = '->',
             bookmark = '<3',
             git      = {
-               unstaged  = 'XX',
-               staged    = '!!',
-               unmerged  = '??',
-               renamed   = '>>',
-               deleted   = '**',
-               untracked = '--',
-               ignored   = '__'
+               unstaged  = '+',
+               staged    = '!',
+               unmerged  = 'X',
+               renamed   = '>',
+               deleted   = '*',
+               untracked = '?',
+               ignored   = '?'
             }
          }
       }

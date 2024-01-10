@@ -1,4 +1,5 @@
 -- nvim/lua/options.lua
+-- Contains stock Vim options.
 
 -- Binds <space> to leader.
 vim.g.mapleader = ' '

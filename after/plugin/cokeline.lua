@@ -1,17 +1,6 @@
 -- nvim/after/plugin/cokeline.lua
 
-local colors = {
-   bg       = '#191724',
-   bg_light = '#26233a',
-   fg_dark  = '#908caa',
-   fg       = '#e0def4',
-   red      = '#eb6f92',
-   green    = '#31748f',
-   yellow   = '#f6c177',
-   blue     = '#9ccfd8',
-   magenta  = '#c4a7e7',
-   cyan     = '#ebbcba'
-}
+local colors = require('colors')
 
 local get_hex = require('cokeline.hlgroups').get_hl_attr
 
