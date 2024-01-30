@@ -5,6 +5,6 @@ local user = {}
 
 -- Colorscheme name, options:
 --    rose-pine, solarized, oxocarbon.
-user.colorscheme = 'rose-pine'
+user.colorscheme = 'oxocarbon'
 
 return user

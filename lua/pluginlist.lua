@@ -6,7 +6,8 @@ return {
 	-- Treesitter (Improved syntax highlighting).
 	{
 		'nvim-treesitter/nvim-treesitter',
-		build = ':TSUpdate'
+		build = ':TSUpdate',
+      lazy  = true
 	},
 	-- Comfy commenting.
 	{
@@ -18,7 +19,8 @@ return {
 		'williamboman/mason.nvim',
 		'williamboman/mason-lspconfig.nvim',
 		'neovim/nvim-lspconfig',
-		'folke/neodev.nvim'
+		'folke/neodev.nvim',
+      lazy = true
 	},
 	-- Code completion.
 	{
@@ -28,17 +30,20 @@ return {
 			'saadparwaiz1/cmp_luasnip',
 			'rafamadriz/friendly-snippets',
 			'hrsh7th/cmp-nvim-lsp'
-		}
+		},
+      lazy = true
 	},
 	-- Telescope.
    {
       {
          'nvim-telescope/telescope.nvim',
-         dependencies = { 'nvim-lua/plenary.nvim' }
+         dependencies = { 'nvim-lua/plenary.nvim' },
+         lazy = true
       },
       {
          'nvim-telescope/telescope-fzf-native.nvim',
-         build = 'make'
+         build = 'make',
+         lazy = true
       }
    },
    -- git signs.
@@ -63,8 +68,21 @@ return {
 	-- Colorschemes
    ---------------
    {
-      'nyoom-engineering/oxocarbon.nvim',
-      'maxmx03/solarized.nvim',
-      { 'rose-pine/neovim', name = 'rose-pine' }
+      {
+         'nyoom-engineering/oxocarbon.nvim',
+         lazy = false,
+         priority = 200
+      },
+      {
+         'maxmx03/solarized.nvim',
+         lazy = true,
+         priority = 200
+      },
+      {
+         'rose-pine/neovim',
+         name = 'rose-pine',
+         lazy = false,
+         priority = 200
+      }
    }
 }
