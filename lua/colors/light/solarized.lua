@@ -1,10 +1,10 @@
--- nvim/lua/colors/solarized.lua
+-- nvim/lua/colors/light/solarized.lua
 
 local colors = {
-   bg       = '#073642',
-   bg_light = '#1d4b5b',
+   bg       = '#eee8d5',
+   bg_light = '#93a1a1',
    fg_dark  = '#586e75',
-   fg       = '#eee8d5',
+   fg       = '#002b36',
    red      = '#dc322f',
    green    = '#859900',
    yellow   = '#b58900',
@@ -14,7 +14,7 @@ local colors = {
 }
 
 -- Configure and set the colorscheme.
-vim.o.background = 'dark'
+vim.o.background = 'light'
 require('solarized').setup({
    styles = {
       comments  = { italic = true, bold = false },

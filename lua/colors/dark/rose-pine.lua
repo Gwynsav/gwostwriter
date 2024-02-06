@@ -1,4 +1,4 @@
--- nvim/lua/colors/rose-pine.lua
+-- nvim/lua/colors/dark/rose-pine.lua
 
 -- Configure and set the colorscheme.
 vim.o.background = 'dark'

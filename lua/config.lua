@@ -6,5 +6,6 @@ local user = {}
 -- Colorscheme name, options:
 --    rose-pine, solarized, oxocarbon.
 user.colorscheme = 'oxocarbon'
+user.color_style = 'light'
 
 return user
