@@ -17,10 +17,13 @@ local conditions = {
 }
 
 -- A custom extension to hide the contents of lualine for any of the following 
--- tree plugins.
-local empty_for_tree = {
+-- buffers created by plugins which don't need the statusbar.
+local empty_for_buffer = {
    sections  = {},
-   filetypes = { 'CHADTree', 'neo-tree', 'nerdtree', 'NvimTree' }
+   filetypes = {
+      'CHADTree', 'neo-tree', 'nerdtree', 'NvimTree', -- File trees.
+      'TelescopePrompt' -- Searches.
+   }
 }
 
 -- Base configuration.
@@ -31,7 +34,7 @@ local config = {
       section_separators   = '',
       globalstatus         = true,
       theme = {
-         -- We are going to use lualine_c an lualine_x as left and right section. 
+         -- We are going to use lualine_c and lualine_x as left and right sections. 
          -- Both are highlighted by the `c` theme. So we are just setting default 
          -- looks for lualine.
          normal   = { c = { fg = colors.fg, bg = colors.bg } },
@@ -55,7 +58,7 @@ local config = {
       lualine_c = {},
       lualine_x = {}
    },
-   extensions = { empty_for_tree }
+   extensions = { empty_for_buffer }
 }
 
 -- Inserts a component into the left section.
@@ -117,7 +120,7 @@ ins_left({ 'location' })
 ins_left({
    'diagnostics',
    sources = { 'nvim_diagnostic' },
-   symbols = { error = '!! ', warn = '?? ', info = 'ii ', hint = 'hh '},
+   symbols = { error = '!! ', warn = '?? ', info = 'ii ', hint = 'hh ' },
    diagnostics_color = {
       error = { fg = colors.red     },
       warn  = { fg = colors.yellow  },

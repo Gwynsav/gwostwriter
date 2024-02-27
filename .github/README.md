@@ -1,5 +1,5 @@
-> **Warning**
-This configuration is made by myself, for myself, and with very little concern for
+> [!WARNING]
+> This configuration is made by myself, for myself, and with very little concern for
 other's preferences. This configuration is not meant to be "good", it's just meant to be
 comfortable for me. Let it also be known that this is *VERY* WIP and I'm no Lua or nvim
 expert.

@@ -80,7 +80,12 @@ return {
       },
       {
          'maxmx03/solarized.nvim',
-         lazy = true,
+         lazy = false,
+         priority = 200
+      },
+      {
+         'ellisonleao/gruvbox.nvim',
+         lazy = false,
          priority = 200
       },
       {
