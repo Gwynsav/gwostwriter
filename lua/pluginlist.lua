@@ -64,6 +64,12 @@ return {
    },
    -- Rainbow parenthesis and brackets.
    'HiPhish/rainbow-delimiters.nvim',
+   -- And indentation lines.
+   {
+      'lukas-reineke/indent-blankline.nvim',
+      main = 'ibl',
+      opts = {}
+   },
    -- Colorize hex/rgb color codes.
    {
       'norcalli/nvim-colorizer.lua',

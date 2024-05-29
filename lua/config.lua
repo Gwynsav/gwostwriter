@@ -5,7 +5,7 @@ local user = {}
 
 -- Colorscheme name, options:
 --    gruvbox, rose-pine, solarized, oxocarbon.
-user.colorscheme = 'gruvbox'
-user.color_style = 'dark'
+user.colorscheme = 'oxocarbon'
+user.color_style = 'light'
 
 return user
