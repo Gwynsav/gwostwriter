@@ -27,7 +27,7 @@ it to be a mono font).
 Installation is fairly simple, just make sure the nvim configuration path exists and run
 ```
 # $CONFIG_PATH varies depending on your OS, on Linux it's most commonly `~/.config/nvim`.
-git clone https://github.com/gwynsav/gwostwrite.git $CONFIG_PATH
+git clone https://github.com/Gwynsav/gwostwriter.git $CONFIG_PATH
 ```
 
 # Acknowledgments
