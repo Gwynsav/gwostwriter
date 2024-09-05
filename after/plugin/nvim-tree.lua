@@ -45,4 +45,4 @@ require('nvim-tree').setup({
 vim.cmd([[nnoremap <leader>n :NvimTreeToggle<CR>]])
 
 -- Autostart Neotree.
-vim.cmd([[autocmd VimEnter * NvimTreeOpen]])
+-- vim.cmd([[autocmd VimEnter * NvimTreeOpen]])

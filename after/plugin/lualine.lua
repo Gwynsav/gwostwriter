@@ -74,12 +74,6 @@ end
 
 -- Left components
 ------------------
-ins_left({
-   function() return '▊' end,
-   color   = { fg = colors.bg_light }, -- Sets highlighting of component.
-   padding = { left = 0, right = 0 }   -- We don't need a space before this.
-})
-
 -- Mode colors and text.
 local mode = {
    n      = { 'NR', colors.blue    },
@@ -139,7 +133,7 @@ ins_left({ function() return '%=' end })
 ins_right({
    'branch',
    icon  = 'branch',
-   color = { fg = colors.fg_dark, gui = 'italic' }
+   color = { fg = colors.fg_dark }
 })
 
 -- Current git branch diff information.
@@ -169,7 +163,9 @@ ins_right({
 
 ins_right({
    function() return '▊' end,
-   color   = { fg = colors.bg_light },
+   color   = function()
+      return { fg = mode[vim.fn.mode()][2] }
+   end,
    padding = { left = 1 }
 })
 

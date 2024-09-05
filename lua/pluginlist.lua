@@ -11,8 +11,14 @@ return {
 	},
 	-- Comfy commenting.
 	{
-		'numToStr/Comment.nvim',
-		config = function() require('Comment').setup() end
+      {
+         'numToStr/Comment.nvim',
+         config = function() require('Comment').setup() end
+      },
+      {
+         'folke/todo-comments.nvim',
+         dependencies = { 'nvim-lua/plenary.nvim' }
+      }
 	},
 	-- LSP
 	{
@@ -58,6 +64,11 @@ return {
    ------------------
    -- GUI elements. No devicons because those are for bitches.
    {
+      -- Welcome buffer.
+      {
+         'echasnovski/mini.starter',
+         version = false
+      },
       'nvim-lualine/lualine.nvim', -- Status line. 
       'willothy/nvim-cokeline',    -- Buffer list.
       'nvim-tree/nvim-tree.lua'    -- File tree.
@@ -79,6 +90,10 @@ return {
 	-- Colorschemes
    ---------------
    {
+      {
+         'echasnovski/mini.base16',
+         version = false
+      },
       {
          'nyoom-engineering/oxocarbon.nvim',
          lazy = false,

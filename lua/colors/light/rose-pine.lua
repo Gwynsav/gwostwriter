@@ -1,14 +1,19 @@
 -- nvim/lua/colors/light/rose-pine.lua
 
+local p = require('rose-pine.palette')
+
 -- Configure and set the colorscheme.
 vim.o.background = 'light'
 require('rose-pine').setup({
+   dim_inactive_windows = false,
    groups = {
       border = 'overlay',
       panel  = 'overlay'
    },
    highlight_groups = {
-      CursorLine = { bg = 'muted', blend = 4 }
+      CursorLine = { bg = 'muted', blend = 4 },
+      Normal     = { bg = p.none, fg = p.text }, -- removes bg color.
+      NvimTreeEmptyFolderName = { fg = p.text }
    },
    styles = {
       bold   = false,
@@ -19,8 +24,8 @@ vim.cmd.colorscheme('rose-pine')
 
 -- Return a table with the colors that will be used for UI.
 return {
-   bg       = '#f2e9e1',
-   bg_light = '#cecacd',
+   bg       = '#faf4ed',
+   bg_light = '#f2e9e1',
    fg_dark  = '#797593',
    fg       = '#575279',
    red      = '#b4637a',

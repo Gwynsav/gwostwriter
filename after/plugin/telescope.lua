@@ -1,6 +1,11 @@
 -- nvim/after/plugin/telescope.lua
 
 require('telescope').setup({
+   pickers = {
+      find_files = {
+         hidden = true
+      }
+   },
 	extensions = {
 		fzf = {
 			fuzzy = true,

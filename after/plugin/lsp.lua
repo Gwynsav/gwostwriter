@@ -46,7 +46,7 @@ require('mason-lspconfig').setup_handlers({
 			on_attach = on_attach,
 			capabilities = capabilities,
 			Lua = {
-				workspace = { checkThirdParth = false },
+				workspace = { checkThirdParty = false },
 				telemetry = { enable = false },
             diagnostics = {
                globals = { 'vim', 'awesome', 'client', 'screen', 'mouse', 'tag' }

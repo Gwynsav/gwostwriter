@@ -10,6 +10,16 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 end)
 
 require('ibl').setup({
-   indent = { highlight = hl },
-   scope = { enabled = false }
+   indent  = { highlight = hl },
+   scope   = { enabled = false },
+   exclude = {
+      filetypes = {
+         'lspinfo', 'checkhealth', 'help', 'man', 'gitcommit', '',
+         'CHADTree', 'neo-tree', 'nerdtree', 'NvimTree', -- File trees.
+         'TelescopePrompt', 'TelescopeResults', 'Starter'
+      },
+      buftypes = {
+         'terminal', 'nofile', 'quickfix', 'prompt'
+      }
+   }
 })
