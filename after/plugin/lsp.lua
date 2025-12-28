@@ -30,7 +30,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Sets the language server installer up.
 require('mason').setup()
-require('mason-lspconfig').setup_handlers({
+require('mason-lspconfig').setup({
 	-- General handler.
 	function(server_name)
 		require('lspconfig')[server_name].setup({
